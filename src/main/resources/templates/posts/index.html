@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragments/head :: head('List of all post')"></head>
+<link rel="stylesheet" href="/css/user.css"/>
+<body class="container">
+<h1>These are all the posts</h1>
+<div th:each="post : ${posts}">
+    <h2 th:text="${post.title}"></h2>
+    <p th:text="${post.body}"></p>
+    <button class="btn btn-primary">Comment</button>
+</div>
+<script th:replace="fragments/scripts :: scripts"></script>
+</body>
+</html>
+
+
+
+<!--LOREM ipsum dolor sit amet, pede urna, nec ultrices, nec ullamcorper suspendisse, purus dapibus at, at dis sem metus lacus ut. Viverra consectetuer elit orci quisque nulla leo, integer magna ut est quibusdam vel, pellentesque pellentesque velit sem odio facilisi. Accumsan consequat dignissim accumsan, mus duis ac tellus tincidunt consectetuer ornare. Etiam aenean congue interdum proin. Neque sed nascetur arcu non mauris maecenas. Maecenas posuere sed augue, aliquam vulputate aliquam a metus consectetuer quam.-->
